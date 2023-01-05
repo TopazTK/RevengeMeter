@@ -33,6 +33,16 @@ assets:
   method: copy
   source:
   - name: assets/commonField.png
+- name: field2d/us/dc0field.2dd
+  package: kh2_fifth
+  method: copy
+  source:
+  - name: files/commonField.2dd
+- name: remastered/field2d/us/dc0field.2dd/US_dc0field_2dd1.png
+  package: kh2_fifth
+  method: copy
+  source:
+  - name: assets/commonField.png
 - name: field2d/us/eh0field.2dd
   package: kh2_fifth
   method: copy
