@@ -23,6 +23,16 @@ assets:
   source:
   - name: assets/steamboatField.png
 
+- name: field2d/us/tr0field.2dd
+  package: kh2_fifth
+  method: copy
+  source:
+  - name: files/commonField.2dd
+- name: remastered/field2d/us/tr0field.2dd/US_tr0field_2dd1.png
+  package: kh2_fifth
+  method: copy
+  source:
+  - name: assets/commonField.png
 - name: field2d/us/bb0field.2dd
   package: kh2_fifth
   method: copy
@@ -119,6 +129,16 @@ assets:
   source:
   - name: files/commonField.2dd
 - name: remastered/field2d/us/mu0field.2dd/US_mu0field_2dd1.png
+  package: kh2_fifth
+  method: copy
+  source:
+  - name: assets/commonField.png
+- name: field2d/us/zz0field.2dd
+  package: kh2_fifth
+  method: copy
+  source:
+  - name: files/commonField.2dd
+- name: remastered/field2d/us/zz0field.2dd/US_zz0field_2dd1.png
   package: kh2_fifth
   method: copy
   source:
