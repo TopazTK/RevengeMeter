@@ -114,12 +114,12 @@ assets:
   source:
   - name: assets/commonField.png
 - name: field2d/us/tt0field.2dd
-  package: kh2_fifth
+  package: kh2_first
   method: copy
   source:
   - name: files/commonField.2dd
 - name: remastered/field2d/us/tt0field.2dd/US_tt0field_2dd1.png
-  package: kh2_fifth
+  package: kh2_first
   method: copy
   source:
   - name: assets/commonField.png
@@ -134,12 +134,12 @@ assets:
   source:
   - name: assets/commonField.png
 - name: field2d/us/zz0field.2dd
-  package: kh2_fifth
+  package: kh2_first
   method: copy
   source:
   - name: files/commonField.2dd
 - name: remastered/field2d/us/zz0field.2dd/US_zz0field_2dd1.png
-  package: kh2_fifth
+  package: kh2_first
   method: copy
   source:
   - name: assets/commonField.png
