@@ -7,8 +7,8 @@ local _battleFlag = 0x24AA5B6
 local _barPointer = 0x453DA2
 local _msnPointer = 0x24A8AC2
 
-local _valStartOffset = 0x4BBA4
-local _barStartOffset = 0x4BBB8
+local _valStartOffset = 0x4BBB8
+local _barStartOffset = 0x4BBA4
 
 local _barAddress = 0x00
 local _msnAddress = 0x00
@@ -21,7 +21,7 @@ local _slotModifier = 0x278
 
 local _healthFound = false
 local _barBossFound = false
-local _barBosses = { "EH15", "HB32", "HE08", "MU09", "TR04"}
+local _barBosses = { "EH15", "HB32", "HE08", "MU09", "TR04" }
 
 function _OnInit()
 end
