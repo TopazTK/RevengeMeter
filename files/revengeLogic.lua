@@ -1,6 +1,12 @@
 LUAGUI_NAME = "Revenge Value Indicator"
 LUAGUI_AUTH = "TopazTK"
-LUAGUI_DESC = "Adds a Revenge Value Indicator, bound to Scan!"
+LUAGUI_DESC = "Adds a Revenge Value Indicator, bound to Scan/Scanra!"
+
+-- Enable if you want to use Scanra instead of Scan.
+local _requireScanra = false
+
+-- Enable if you are using Boss Randomizer or Battle Level Randomizer.
+local _ignoreHealth = false
 
 local _battleFlag = 0x24AA5B6
 
@@ -18,6 +24,8 @@ local _valueIndicator = 0x00
 
 local _slotAddress = 0x24BC4D2
 local _slotModifier = 0x278
+
+local _foundScans = 0
 
 local _healthFound = false
 local _barBossFound = false
@@ -40,7 +48,18 @@ function _OnFrame()
             end
         end
 
-        if _healthFound == true then
+        if _requireScanra == true and _foundScans == 0 then
+            for i = 0, 68 do
+                _currPoint = 0x4450A6 + 0x02 * i
+                _currAbility = ReadShort(_currPoint)
+
+                if _currAbility == 0x808A then
+                    _foundScans = _foundScans + 0x01;
+                end
+            end
+        end
+
+        if (_healthFound == true or _ignoreHealth == true) and ((_requireScanra == true and _foundScans == 0x02) or _requireScanra == false) then
             _rvCurr = ReadFloat(ReadLong(0x56FD2A) + 0xD48, true)
             _rvMaxi = ReadFloat(ReadLong(0x56FD2A) + 0xD4C, true)
 
@@ -91,6 +110,7 @@ function _OnFrame()
         _msnAddress = 0x00
         _valueIncrementor = 0x00
         _valueIndicator = 0x00
+        _foundScans = 0
         WriteShort(_barAddress + _barStartOffset + 0x08, 0xFE04, true)
         WriteShort(_barAddress + _valStartOffset + 0x08, 0xFD94, true)
     end
